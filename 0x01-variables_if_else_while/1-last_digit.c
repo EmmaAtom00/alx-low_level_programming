@@ -10,14 +10,14 @@
  */
 
 int main(void)
-{
+{	
+	int ldg;
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 
-	int ldg;
 	ldg= n % 10;
 
 	if (ldg > 5)
