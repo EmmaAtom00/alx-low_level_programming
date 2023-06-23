@@ -1,5 +1,5 @@
 #include <stdio.h>
-#incude 'main.h'
+#include 'main.h'
 
 /**
  * main - testing  for positive numbers
