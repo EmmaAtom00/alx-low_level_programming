@@ -21,5 +21,5 @@ void print_numbers(void)
 		putchar(i);
 	}
 
-	putchar('\n');
+	putchar(10);
 }
