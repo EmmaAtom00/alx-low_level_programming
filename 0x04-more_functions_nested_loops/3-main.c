@@ -4,5 +4,6 @@
 int main()
 {
 	print_numbers();
+	putchar(48);
 	return (0);
 }
