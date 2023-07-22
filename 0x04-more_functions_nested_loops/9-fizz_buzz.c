@@ -10,39 +10,37 @@ int main(void)
 {
 	int i;
 	int n;
+	int k;
 
 	for (i = 1; i < 101; i++)
 	{
-		if (i % 3 == 0)
+		n = i % 3;
+		k = i % 5;
+		if (n == 0 && k == 0)
 		{
-			if (i % 5 != 0)
+			printf("FizzBuzz");
+		}
+		else
+		{
+			if (n == 0)
 			{
-				n = i;
 				printf("Fizz");
-				if (i != 101)
-					putchar(' ');
+			}
+			else if (k == 0)
+			{
+				printf("Buzz");
+			}
+			else
+			{
+				printf("%d", i);
 			}
 		}
-		else if (i % 5 == 0)
+		if (i != 100)
 		{
-			n = i;
-			printf("Buzz");
-			if (i != 101)
-				putchar(' ');
-		}
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			n = i;
-			printf("FizzBuzz");
-			if (i != 100)
-				putchar(' ');
-		}
-		else if (i != n)
-		{
-			printf("%d", i);
-			if (i != 100)
-				putchar(' ');
+			putchar(' ');
 		}
 	}
+
+	putchar('\n');
 	return (0);
 }
