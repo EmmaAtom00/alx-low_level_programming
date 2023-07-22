@@ -34,7 +34,7 @@ int main()
 		{
 			n = i;
 			printf("FizzBuzz");
-			if(i != 101)
+			if(i != 100)
 				putchar(' ');
 		}
 		else if (i != n)
