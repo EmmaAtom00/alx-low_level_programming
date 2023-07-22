@@ -15,26 +15,29 @@ int main()
 	{
 		if (i % 3 == 0)
 		{
-			n = i;
-			printf("fizz");
-			if(i != 101)
-				putchar(' ');
+			if (i % 5 != 0)
+			{
+				n = i;
+				printf("Fizz");
+				if(i != 101)
+					putchar(' ');
+			}
 		}
-		if (i % 5 == 0)
+		else if (i % 5 == 0)
 		{
 			n = i;
-			printf("buzz");
+			printf("Buzz");
 			if(i != 101)
 				putchar(' ');
 		}
 		if (i % 3 == 0 && i % 5 == 0)
 		{
 			n = i;
-			printf("fizzbuzz");
+			printf("FizzBuzz");
 			if(i != 101)
 				putchar(' ');
 		}
-		if (i != n)
+		else if (i != n)
 		{
 			printf("%d", i);
 			if(i != 100)
