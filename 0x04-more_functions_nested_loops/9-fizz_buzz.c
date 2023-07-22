@@ -6,7 +6,7 @@
  * Return: return 0 for success
  */
 
-int main()
+int main(void)
 {
 	int i;
 	int n;
@@ -19,7 +19,7 @@ int main()
 			{
 				n = i;
 				printf("Fizz");
-				if(i != 101)
+				if (i != 101)
 					putchar(' ');
 			}
 		}
@@ -27,23 +27,22 @@ int main()
 		{
 			n = i;
 			printf("Buzz");
-			if(i != 101)
+			if (i != 101)
 				putchar(' ');
 		}
 		if (i % 3 == 0 && i % 5 == 0)
 		{
 			n = i;
 			printf("FizzBuzz");
-			if(i != 100)
+			if (i != 100)
 				putchar(' ');
 		}
 		else if (i != n)
 		{
 			printf("%d", i);
-			if(i != 100)
+			if (i != 100)
 				putchar(' ');
 		}
 	}
-	putchar('\n');
 	return (0);
 }
