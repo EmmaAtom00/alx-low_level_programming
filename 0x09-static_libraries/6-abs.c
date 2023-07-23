@@ -1,1 +1,1 @@
-int _abs(int d);
+int _abs(int n);
