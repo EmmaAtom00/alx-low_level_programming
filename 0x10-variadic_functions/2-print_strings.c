@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_string - print sstrings followed by a new line
+ * print_strings - print sstrings followed by a new line
  * @separator: the string to be printed between strings
  * @n: the numbers of arguments
  * Return: return nothing
@@ -16,23 +16,21 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *str;
 
 	va_start(valist, n);
-	if (*separator == '\0')
-	{
-		;
-	}
 
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(valist, char*);
-		if (str[1] == '\0')
+		if (str == NULL)
 			printf("(nil)");
 		else
 		{
 			printf("%s", str);
-			if (i != 1)
+			if (i != n - 1)
 			{
-				printf("%s", separator);
-				putchar(' ');
+				if (separator != NULL)
+				{
+					printf("%s", separator);
+				}
 			}
 		}
 	}
