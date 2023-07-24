@@ -13,17 +13,30 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list valist;
 	unsigned int i;
+	char *str;
 
 	va_start(valist, n);
-		for (i = 0; i < n; i++)
+	if (*separator == '\0')
+	{
+		;
+	}
+
+	for (i = 0; i < n; i++)
+	{
+		str = va_arg(valist, char*);
+		if (str[1] == '\0')
+			printf("(nil)");
+		else
 		{
-			if (va_arg(valist, char *))
-				printf("%s", va_arg(valist, char *));
-			else
-				printf("(nil)");
-			if (separator && i < n - 1)
+			printf("%s", str);
+			if (i != 1)
+			{
 				printf("%s", separator);
+				putchar(' ');
+			}
 		}
+	}
+
 	va_end(valist);
 	printf("\n");
 }
