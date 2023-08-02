@@ -2,7 +2,8 @@
 
 int main()
 {
-	int n = _strlen_recursion("Hello world");
-	printf("%d\n", n);
+	int r;
+	r = factorial(-23);
+	printf("%d\n", r);
 	return (0);
 }
