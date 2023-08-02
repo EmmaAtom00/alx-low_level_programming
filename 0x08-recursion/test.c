@@ -2,6 +2,7 @@
 
 int main()
 {
-	_print_rev_recursion("Hello world");
+	int n = _strlen_recursion("Hello world");
+	printf("%d\n", n);
 	return (0);
 }
