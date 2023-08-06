@@ -3,7 +3,7 @@
 int main()
 {
 	int r;
-	r = _pow_recursion(2, -1);
+	r = _sqrt_recursion(3);
 	printf("%d\n", r);
 	return (0);
 }
