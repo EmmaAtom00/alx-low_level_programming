@@ -5,13 +5,14 @@
  * main - a program that multiplies two numbers
  * @argc: The argument count
  * @argv: the argument vector
+ * Return: return 0
  */
 
 int main(int argc, char **argv)
 {
 	int product;
 
-	if ( argv[1] == NULL)
+	if (argv[1] == NULL)
 	{
 		printf("Error\n");
 	}
