@@ -8,6 +8,8 @@
  * @owner: dogs owner
  */
 
+#include <stdlib.h>
+
 struct dog
 {
 	char *name;
