@@ -1,7 +1,12 @@
-General
+# Function Pointers
 
-What are function pointers and how to use them
+## General
 
-What does a function pointer exactly hold
+* What are function pointers and how to use them
 
-Where does a function pointer point to in the virtual memory
+* What does a function pointer exactly hold
+
+* Where does a function pointer point to in the virtual memory
+
+### Syntax
+`void (*func)(int*)`
