@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	char c;
 	int (*func)(int, int);
 
-	if (argc > 4)
+	if (argc > 4 || argc < 4)
 	{
 		printf("Error\n");
 		exit(98);
