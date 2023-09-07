@@ -5,28 +5,31 @@
  * @filename: the name of the file to be printed
  * @letters: the number of letters to ne printed
  *
- * Return: return 0 for NULO and failure
+ * Return: return 0 for NULL and failure
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
-	char c;
+	char *buffer;
+	FILE *fd;
+	ssize_t re, wr;
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
 
-	fp = fopen(filename, "r");
+	fd = fopen(filename, "r");
 
-	if (fp == NULL)
+	if (fd == NULL)
 		return (0);
 
-	while (c != EOF)
-	{
-		putchar(c);
-		c = fgetc(fp);
-	}
+	buffer = malloc(sizeof(char) * letters);
 
-	fclose(fp);
-	return (letters);
+	re = fread(buffer, sizeof(char), letters, fd);
+	if (re == -1)
+		return (0);
+	wr = write(STDOUT_FILENO, buffer, letters);
+	if (wr == -1)
+		return (0);
+
+	return (re);
 }
